@@ -1,0 +1,69 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  /* MAIN */
+  --color-background: #fff;
+  --ease-fluid: cubic-bezier(0.3, 0, 0, 1);
+  --ease-snappy: cubic-bezier(0.2, 0, 0.2, 1);
+
+  /* PRIMARY */
+  --color-primary: var(--color-softpeach);
+  --color-primary-50: var(--softpeach-50);
+  --color-primary-100: var(--softpeach-100);
+  --color-primary-200: var(--softpeach-200);
+  --color-primary-300: var(--softpeach-300);
+  --color-primary-400: var(--softpeach-400);
+  --color-primary-500: var(--softpeach-500);
+  --color-primary-600: var(--softpeach-600);
+  --color-primary-700: var(--softpeach-700);
+  --color-primary-800: var(--softpeach-800);
+  --color-primary-900: var(--softpeach-900);
+  --color-primary-950: var(--softpeach-950);
+
+  /* SECONDARY */
+
+  /* Soft Peach */
+  --color-softpeach: var(--softpeach-950);
+  --softpeach-50: #faf6f6;
+  --softpeach-100: #f6f0f0;
+  --softpeach-200: #ebdddd;
+  --softpeach-300: #dcc5c5;
+  --softpeach-400: #c7a2a2;
+  --softpeach-500: #b08383;
+  --softpeach-600: #996969;
+  --softpeach-700: #805555;
+  --softpeach-800: #6b4949;
+  --softpeach-900: #5b4141;
+  --softpeach-950: #2f2020;
+
+  /* Vanilla Ice */
+  --color-vi: var(--color-vi-900);
+  --color-vi-50: #fbf5f6;
+  --color-vi-100: #f7e9ea;
+  --color-vi-200: #f2dbdd;
+  --color-vi-300: #e6bbbf;
+  --color-vi-400: #d5949a;
+  --color-vi-500: #c37077;
+  --color-vi-600: #ad555d;
+  --color-vi-700: #91444b;
+  --color-vi-800: #793b40;
+  --color-vi-900: #66363a;
+  --color-vi-950: #36191c;
+}
+
+.dark {
+  --color-background: var(--softpeach-950);
+  --color-primary: var(--softpeach-50);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
